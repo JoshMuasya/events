@@ -1,0 +1,81 @@
+import { Service } from '../types';
+
+export const services: Service[] = [
+    {
+        icon: "🎨",
+        hues: [270, 290],
+        title: "Event Planning & Coordination",
+        description: "Seamless planning for unforgettable events.",
+        link: "/services/event-planning",
+    },
+    {
+        icon: "🌸",
+        hues: [20, 40],
+        title: "Event Design & Styling",
+        description: "Custom themes, décor, and breathtaking designs.",
+        link: "/services/event-design",
+    },
+    {
+        icon: "📸",
+        hues: [260, 280],
+        title: "Photography & Videography",
+        description: "Capture your moments with perfection.",
+        link: "/services/photography",
+    },
+    {
+        icon: "🍽️",
+        hues: [20, 40],
+        title: "Catering & Beverage Management",
+        description: "Delicious menus tailored for every event.",
+        link: "/services/catering",
+    },
+    {
+        icon: "🎶",
+        hues: [250, 270],
+        title: "Entertainment Services",
+        description: "Unforgettable performances and music.",
+        link: "/services/entertainment",
+    },
+    {
+        icon: "💻",
+        hues: [240, 260],
+        title: "Technology & Virtual Events",
+        description: "Hybrid and virtual event solutions with ease.",
+        link: "/services/technology",
+    },
+    {
+        icon: "🎁",
+        hues: [20, 40],
+        title: "Gifts & Favors",
+        description: "Personalized mementos for your guests.",
+        link: "/services/gifts",
+    },
+    {
+        icon: "🚗",
+        hues: [250, 270],
+        title: "Event Rentals & Logistics",
+        description: "Luxury rentals and smooth event execution.",
+        link: "/services/rentals",
+    },
+    {
+        icon: "✉️",
+        hues: [250, 270],
+        title: "Invitation & Guest Management",
+        description: "Custom invites and seamless check-ins.",
+        link: "/services/invitations",
+    },
+    {
+        icon: "✈️",
+        hues: [20, 40],
+        title: "Specialized Services",
+        description: "Destination planning and corporate solutions.",
+        link: "/services/specialized",
+    },
+    {
+        icon: "🤝",
+        hues: [260, 280],
+        title: "Vendor Management",
+        description: "We coordinate with the best for you.",
+        link: "/services/vendors",
+    },
+];
