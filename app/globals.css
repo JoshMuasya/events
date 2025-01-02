@@ -63,13 +63,13 @@ body {
 }
 
 .glass{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(135deg, rgba(26, 1, 39, 0.8), rgba(102, 51, 102, 0.4)); /* Dark purple with a soft gradient */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border:1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-
+  border: 1px solid rgba(255, 225, 164, 0.2); /* Soft golden border */
+  box-shadow: 0 8px 32px 0 rgba(155, 55, 120, 0.6); /* Subtle purple-pink shadow */
+  color: #F5E1A4; /* Golden text for readability */
 }
 
 html {
