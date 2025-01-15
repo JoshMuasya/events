@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react"; // Importing an icon for the button (use Lucide icons)
+import { motion, AnimatePresence } from "framer-motion";
 
 const BackToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -29,15 +30,38 @@ const BackToTop = () => {
     }, []);
 
     return (
-        <button
-            onClick={scrollToTop}
-            className={`fixed bottom-8 right-8 p-3 rounded-full bg-[#faa722] text-white shadow-lg hover:bg-[#E5941C] transition-transform duration-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0"
-                }`}
-            style={{ zIndex: 1000 }}
-            aria-label="Back to Top"
-        >
-            <ArrowUp size={24} />
-        </button>
+        <AnimatePresence>
+            {isVisible && (
+                <motion.button
+                    onClick={scrollToTop}
+                    className="fixed bottom-8 right-8 p-3 rounded-full bg-[#faa722] text-white shadow-lg"
+                    style={{ zIndex: 1000 }}
+                    aria-label="Back to Top"
+                    initial={{ opacity: 0, scale: 0, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0, y: 20 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ 
+                        scale: 1.1,
+                        backgroundColor: "#E5941C",
+                        boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <motion.div
+                        animate={{ y: [0, -4, 0] }}
+                        transition={{ 
+                            duration: 1.5,
+                            repeat: Infinity,
+                            repeatType: "reverse",
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <ArrowUp size={24} />
+                    </motion.div>
+                </motion.button>
+            )}
+        </AnimatePresence>
     );
 };
 

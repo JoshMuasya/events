@@ -72,6 +72,13 @@ body {
   color: #F5E1A4; /* Golden text for readability */
 }
 
+.glass-borderless {
+  background: linear-gradient(135deg, rgba(26, 1, 39, 0.8), rgba(102, 51, 102, 0.4)); /* Dark purple with a soft gradient */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #F5E1A4; /* Golden text for readability */
+}
+
 html {
   scroll-behavior: smooth;
 }

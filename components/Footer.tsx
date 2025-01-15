@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-[#1a0127] text-white py-10 w-full relative">
             <div className="w-full container mx-auto flex flex-col md:flex-row justify-center items-center align-middle px-4">
                 {/* Logo & Slogan */}
-                <div className="mb-6 md:mb-0 text-center md:text-left w-full md:w-[25%]">
+                <div className="mb-6 md:mb-0 text-center w-full ">
                     <h2 className="text-3xl font-bold text-[#E2C4FF]">Twilight Luxe Creations</h2>
                     <p className="text-sm text-[#F5E1A4]">"Where Every Detail Dances in Elegance—Discover the Art of Unforgettable Moments."</p>
                 </div>
