@@ -74,7 +74,7 @@ const Hero = () => {
             >
                 <motion.h1
                     ref={ref}
-                    className="text-xl md:text-3xl lg:text-6xl font-bold mb-2 md:mb-4 lg:mb-10"
+                    className="text-2xl md:text-3xl lg:text-6xl font-bold mb-3 md:mb-4 lg:mb-10"
                     style={{
                         color: "#FFFFFF",
                         fontFamily: "'Playfair Display', serif",
@@ -83,12 +83,12 @@ const Hero = () => {
                     TWILIGHT LUXE CREATIONS
                 </motion.h1>
 
-                <h3 className="w-full md:max-w-[35%] text-md md:text-xl lg:text-4xl items-center md:text-start mx-auto ml-0 mb-2 md:mb-4 lg:mb-10">
+                <h3 className="w-2/3 md:max-w-[35%] text-md md:text-xl lg:text-4xl items-center md:text-start mx-auto ml-0 mb-3 md:mb-4 lg:mb-10">
                     "Where Every Detail Dances in Elegance—Discover the Art of Unforgettable Moments."
                 </h3>
 
                 <p
-                    className="text-sm md:text-lg lg:text-3xl italic mb-2 md:mb-4 lg:mb-10"
+                    className="text-base md:text-lg lg:text-3xl italic mb-3 md:mb-4 lg:mb-10"
                     style={{
                         color: "#FAA722",
                         fontFamily: "'Lora', serif"  // For a classic, elegant look. Or use Raleway for a more modern feel
@@ -97,7 +97,7 @@ const Hero = () => {
                     Crafting Perfect Events with Luxe Precision
                 </p> {/* Gold for the slogan */}
 
-                <div className='flex flex-row justify-around w-1/3 items-start align-middle'>
+                <div className='flex flex-row justify-start md:justify-around w-2/3 md:w-1/3 items-start align-middle'>
                     <motion.button
                         style={{
                             border,
@@ -109,7 +109,7 @@ const Hero = () => {
                         whileTap={{
                             scale: 0.985
                         }}
-                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white transition-all duration-300 bg-gradient-to-r from-[#A855F7] via-[#C79330] to-[#8C46E5]"
+                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white transition-all duration-300 bg-gradient-to-r from-[#A855F7] via-[#C79330] to-[#8C46E5] mr-8 md:mr-0"
                     >
                         Our Services
                     </motion.button>
@@ -155,6 +155,11 @@ const Hero = () => {
                     {/* Digimatic Marketers */}
                     <div className='text-accent font-black text-xl'>
                         Digimatic Marketers
+                    </div>
+
+                    {/* Thiiya Safaris */}
+                    <div className='text-accent font-black text-xl'>
+                        Thiiya Safaris
                     </div>
                 </motion.div>
             </motion.section>

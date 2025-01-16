@@ -83,15 +83,15 @@ const Navbar = () => {
         zIndex: 30,
         width: "100%",
       }}
-      >
-      <div className="z-30 h-16 bg-[rgba(25,0,51,0.5)] backdrop-blur-md flex justify-between items-center container mx-auto navbar px-10 text-white border-radius border border-[rgba(255,255,255,0.2)] rounded-lg">
+    >
+      <div className="z-30 h-16 bg-[rgba(25,0,51,0.5)] backdrop-blur-md flex justify-around items-center container mx-auto navbar px-3 sm:px-5 md:px-10 text-white border border-[rgba(255,255,255,0.2)] rounded-lg">
         {/* Logo */}
-        <div className="hidden md:block w-[30px] h-[30px]">
+        <div className="block w-[16px] sm:w-[20px] md:w-[30px]">
           <img src="/logo.png" alt="Logo" className="w-full h-full" />
         </div>
 
         {/* Navigation Icons */}
-        <div className={`flex justify-center gap-16 w-${navWidth}`}>
+        <div className={`flex justify-center gap-8 sm:gap-12 md:gap-16 w-${navWidth}`}>
           {NavIcons.map((icon, index) => {
             const IconComponent = icon.component;
             return (
@@ -100,15 +100,18 @@ const Navbar = () => {
                 href={icon.link}
                 className="flex flex-col items-center text-[#faa722] hover:text-[#E5941C] transition duration-300"
               >
-                <IconComponent className="w-6 h-6 mb-1 hover:scale-125 transition transform duration-300" />
-                <span className="text-sm font-semibold">{icon.name}</span>
+                <IconComponent className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mb-0 sm:mb-1 hover:scale-125 transition transform duration-300" />
+                {/* Hide text on mobile */}
+                <span className="hidden sm:block md:text-sm font-semibold">
+                  {icon.name}
+                </span>
               </a>
             );
           })}
         </div>
       </div>
     </motion.div>
-  )
+  );
 }
 
 export default Navbar
