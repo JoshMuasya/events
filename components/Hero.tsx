@@ -97,7 +97,7 @@ const Hero = () => {
                     Crafting Perfect Events with Luxe Precision
                 </p> {/* Gold for the slogan */}
 
-                <div className='flex flex-row justify-start md:justify-around w-2/3 md:w-1/3 items-start align-middle'>
+                <div className='flex flex-row justify-start md:justify-around w-full md:w-1/3 items-start align-middle'>
                     <motion.button
                         style={{
                             border,
@@ -109,7 +109,7 @@ const Hero = () => {
                         whileTap={{
                             scale: 0.985
                         }}
-                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white transition-all duration-300 bg-gradient-to-r from-[#A855F7] via-[#C79330] to-[#8C46E5] mr-8 md:mr-0"
+                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white text-sm transition-all duration-300 bg-gradient-to-r from-[#A855F7] via-[#C79330] to-[#8C46E5] mr-8 md:mr-0"
                     >
                         Our Services
                     </motion.button>
@@ -125,7 +125,7 @@ const Hero = () => {
                         whileTap={{
                             scale: 0.985
                         }}
-                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white transition-all duration-300"
+                        className="flex w-fit items-center gap-2 rounded-full px-4 py-2 text-white text-sm transition-all duration-300"
                     >
                         Contact Us
                     </motion.button>

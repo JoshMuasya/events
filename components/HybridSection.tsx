@@ -27,12 +27,12 @@ const HybridSection: React.FC<HybridSectionProps> = ({ items, type }) => {
     };
 
     return (
-        <section className="py-12 glass-borderless">
-            <div className="flex flex-col justify-center items-center align-middle py-10">
-                <h2 className="text-3xl font-bold text-center mb-8">
+        <section className="py-6 md:py-12 glass-borderless">
+            <div className="flex flex-col justify-center items-center align-middle py-5 md:py-10">
+                <h2 className="text-xl md:text-3xl font-bold text-center mb-4 md:mb-8">
                     Our Stories in Frames and Words
                 </h2>
-                <h4>
+                <h4 className="text-center text-sm md:text-xl italic">
                     Discover the heart and soul of our journey through captivating visuals and inspiring testimonials
                 </h4>
             </div>

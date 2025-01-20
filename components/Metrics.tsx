@@ -56,7 +56,7 @@ const Metrics = () => {
                     animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     exit={{ opacity: 0, y: 40 }} // Exit animation for heading
-                    className="text-6xl font-bold mb-12"
+                    className="text-3xl md:text-6xl font-bold mb-12"
                 >
                     KEY METRICS
                 </motion.h2>
@@ -76,7 +76,7 @@ const Metrics = () => {
                                 animate={isInView ? { scale: 1 } : { scale: 0.5 }}
                                 exit={{ scale: 0.5 }} // Exit animation for value
                                 transition={{ delay: 0.6 + index * 0.1, duration: 0.8, type: 'spring' }}
-                                className="text-5xl font-bold text-purple-300 mb-2"
+                                className="text-3xl md:text-5xl font-bold text-purple-300 mb-2"
                             >
                                 {metric.value}
                             </motion.h3>
@@ -86,7 +86,7 @@ const Metrics = () => {
                                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                                 transition={{ delay: 0.8 + index * 0.1, duration: 0.8 }}
                                 exit={{ opacity: 0 }} // Exit animation for label
-                                className="text-xl font-semibold mb-2"
+                                className="text-base md:text-xl font-semibold mb-2"
                             >
                                 {metric.label}
                             </motion.p>
@@ -96,7 +96,7 @@ const Metrics = () => {
                                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                                 transition={{ delay: 1 + index * 0.1, duration: 0.8 }}
                                 exit={{ opacity: 0 }} // Exit animation for description
-                                className="text-gray-400"
+                                className="text-gray-400 text-sm md:text-base"
                             >
                                 {metric.description}
                             </motion.p>

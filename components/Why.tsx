@@ -43,14 +43,14 @@ const Why = () => {
             <div className='flex flex-col items-center align-middle justify-center py-10'>
                 <div className='flex flex-col items-center align-middle justify-center font-bold text-[#FFD700]'>
                     {/* Heading */}
-                    <div className='text-4xl md:text-6xl'>
+                    <div className='text-3xl md:text-6xl text-center'>
                         <h1 >
                             Why Clients Trust Us with Their Events
                         </h1>
                     </div>
 
                     {/* Sub Heading  */}
-                    <div className='text-xl md:text-3xl italic py-10'>
+                    <div className='text-xl md:text-3xl italic py-10 text-center'>
                         <h2>
                             Your vision, our expertise—making every event unforgettable.
                         </h2>
@@ -63,7 +63,7 @@ const Why = () => {
                         <motion.div
                             key={index}
                             className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                                } items-center lg:items-start shadow-bottomLeft rounded-lg p-5`}
+                                } items-center lg:items-start shadow-bottomRight rounded-lg p-5`}
                             style={{
                                 backgroundColor: index % 2 === 0 ? "#2b1139" : "#3c1a4d", // Alternating background colors
                             }}
@@ -95,8 +95,8 @@ const Why = () => {
                                 viewport={{ amount: 0.4 }}
                                 transition={{ duration: 1, delay: 0.4 }}
                             >
-                                <h3 className="text-2xl font-semibold text-[#F5E1A4]">{feature.title}</h3>
-                                <p className="text-[#E2C4FF] mt-4">{feature.description}</p>
+                                <h3 className="text-lg md:text-2xl font-semibold text-[#F5E1A4]">{feature.title}</h3>
+                                <p className="text-[#E2C4FF] mt-4 text-sm md:text-lg">{feature.description}</p>
                             </motion.div>
                         </motion.div>
                     ))}
