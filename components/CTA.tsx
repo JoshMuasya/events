@@ -8,7 +8,7 @@ const CTA = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2 }}
-      className="px-4 py-32 bg-[#1a0127] text-white glass my-5"
+      className="px-2 md:px-4 py-20 md:py-32 bg-[#1a0127] text-white glass my-3 md:my-5"
       id="cta"
     >
       <div className="container mx-auto flex flex-col items-center text-center">
@@ -17,7 +17,7 @@ const CTA = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-5xl font-bold text-[#E2C4FF] mb-6"
+          className="text-2xl md:text-5xl font-bold text-[#E2C4FF] mb-6"
         >
           Let’s Bring Your Vision to Life!
         </motion.h2>
@@ -27,7 +27,7 @@ const CTA = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
-          className="text-lg text-[#F5E1A4] mb-8 max-w-2xl"
+          className="text-sm md:text-lg text-[#F5E1A4] mb-8 max-w-2xl"
         >
           Partner with Twilight Luxe Creations for tailored event planning that transforms every moment into a memory. Book your consultation now and let's start crafting your dream event!
         </motion.p>
@@ -39,7 +39,7 @@ const CTA = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.4 }}
-            className="px-6 py-3 bg-[#9e3722] text-white text-lg font-bold rounded-lg shadow-lg hover:bg-[#651b0d] transition duration-300"
+            className="px-3 md:px-6 py-3 bg-[#9e3722] text-white text-sm md:text-lg font-bold rounded-lg shadow-lg hover:bg-[#651b0d] transition duration-300"
           >
             Book a Free Consultation
           </motion.a>
@@ -48,15 +48,15 @@ const CTA = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.6 }}
-            className="px-6 py-3 bg-[#faa722] text-[#1a0127] text-lg font-bold rounded-lg shadow-lg hover:bg-[#E5941C] transition duration-300"
+            className="px-3 md:px-6 py-3 bg-[#faa722] text-[#1a0127] text-sm md:text-lg font-bold rounded-lg shadow-lg hover:bg-[#E5941C] transition duration-300"
           >
             Learn More About Us
           </motion.a>
         </div>
 
         {/* Form Section */}
-        <div className="mt-12 max-w-xl w-full bg-[#260136] p-8 rounded-lg shadow-xl">
-          <form className="flex flex-col gap-4">
+        <div className="mt-6 md:mt-12 max-w-full md:max-w-xl w-full bg-[#260136] p-4 md:p-8 rounded-lg shadow-xl">
+          <form className="flex flex-col gap-4 text-sm md:text-base">
             <input
               type="text"
               placeholder="Your Name"
@@ -86,8 +86,8 @@ const CTA = () => {
         </div>
 
         {/* Footer */}
-        <p className="mt-8 text-sm text-gray-400">
-          Have questions? Call us at <a href="tel:+1234567890" className="text-[#faa722]">+123 456 7890</a> or email us at <a href="mailto:info@twilightluxe.com" className="text-[#faa722]">info@twilightluxe.com</a>.
+        <p className="mt-4 md:mt-8 text-xs md:text-sm text-gray-400">
+          Have questions? Call us at <a href="tel:+25478040353" className="text-[#faa722]">+254 798040353</a> or email us at <a href="mailto:info@twilightluxe.com" className="text-[#faa722]">info@twilightluxe.com</a>.
         </p>
       </div>
     </motion.section>

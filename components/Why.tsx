@@ -43,27 +43,27 @@ const Why = () => {
             <div className='flex flex-col items-center align-middle justify-center py-10'>
                 <div className='flex flex-col items-center align-middle justify-center font-bold text-[#FFD700]'>
                     {/* Heading */}
-                    <div className='text-3xl md:text-6xl text-center'>
-                        <h1 >
+                    <div className='text-3xl md:text-6xl text-center px-4'>
+                        <h1 className="break-words">
                             Why Clients Trust Us with Their Events
                         </h1>
                     </div>
 
                     {/* Sub Heading  */}
-                    <div className='text-xl md:text-3xl italic py-10 text-center'>
-                        <h2>
+                    <div className='text-xl md:text-3xl italic py-10 text-center px-4'>
+                        <h2 className="break-words">
                             Your vision, our expertise—making every event unforgettable.
                         </h2>
                     </div>
                 </div>
 
                 {/* Features */}
-                <div className="space-y-12 w-3/4">
+                <div className="space-y-12 w-full px-4 md:w-3/4">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
                             className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-                                } items-center lg:items-start shadow-bottomRight rounded-lg p-5`}
+                                } items-center lg:items-start shadow-bottomRight rounded-lg p-3 md:p-5 w-full`}
                             style={{
                                 backgroundColor: index % 2 === 0 ? "#2b1139" : "#3c1a4d", // Alternating background colors
                             }}
@@ -89,14 +89,14 @@ const Why = () => {
 
                             {/* Right: Content */}
                             <motion.div
-                                className="w-full lg:w-1/2 lg:px-12 mt-6 lg:mt-0"
+                                className="w-full lg:w-1/2 lg:px-12 mt-6 lg:mt-0 px-2"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 viewport={{ amount: 0.4 }}
                                 transition={{ duration: 1, delay: 0.4 }}
                             >
-                                <h3 className="text-lg md:text-2xl font-semibold text-[#F5E1A4]">{feature.title}</h3>
-                                <p className="text-[#E2C4FF] mt-4 text-sm md:text-lg">{feature.description}</p>
+                                <h3 className="text-lg md:text-2xl font-semibold text-[#F5E1A4] break-words">{feature.title}</h3>
+                                <p className="text-[#E2C4FF] mt-4 text-sm md:text-lg break-words">{feature.description}</p>
                             </motion.div>
                         </motion.div>
                     ))}

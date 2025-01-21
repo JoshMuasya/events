@@ -6,17 +6,32 @@ export const styles = {
         backgroundImage: 'url("/services.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'scroll',
-        minHeight: '100%',
+        backgroundAttachment: 'scroll', // Use 'fixed' for larger screens if needed
+        minHeight: '100vh', // Ensures it fills the full viewport height
         position: 'relative',
+        // Add responsive adjustments
+        '@media (max-width: 768px)': {
+            backgroundPosition: 'top', // Adjust the position for smaller screens
+        },
+        '@media (max-width: 480px)': {
+            backgroundAttachment: 'scroll', // Disable fixed for very small screens
+        },
     } as CSSProperties,
 
     overlay: {
         position: 'absolute',
         inset: 0,
         backgroundColor: COLORS.purpleOverlay,
-        backdropFilter: 'blur(8px)',
-    } as CSSProperties,
+        backdropFilter: 'blur(8px)', // Applies blur effect
+        zIndex: 1, // Ensure it appears above other elements
+        '@media (max-width: 768px)': {
+            backdropFilter: 'blur(4px)', // Reduce blur intensity on smaller screens
+        },
+        '@media (max-width: 480px)': {
+            backdropFilter: 'none', // Remove blur effect for better performance on very small screens
+            backgroundColor: `${COLORS.purpleOverlay}CC`, // Add transparency as a fallback
+        },
+    } as CSSProperties,    
 
     pageContainer: {
         display: "flex",

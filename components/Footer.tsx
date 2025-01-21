@@ -4,11 +4,11 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer className="bg-[#1a0127] text-white py-10 w-full relative">
-            <div className="w-full container mx-auto flex flex-col md:flex-row justify-center items-center align-middle px-4">
+            <div className="w-full container mx-auto flex flex-col md:flex-row justify-center items-center align-middle px-2 md:px-4">
                 {/* Logo & Slogan */}
-                <div className="mb-6 md:mb-0 text-center w-full ">
-                    <h2 className="text-3xl font-bold text-[#E2C4FF]">Twilight Luxe Creations</h2>
-                    <p className="text-sm text-[#F5E1A4]">"Where Every Detail Dances in Elegance—Discover the Art of Unforgettable Moments."</p>
+                <div className="mb-10 md:mb-0 text-center w-full ">
+                    <h2 className="text-xl md:text-3xl font-bold text-[#E2C4FF]">Twilight Luxe Creations</h2>
+                    <p className="text-xs md:text-sm text-[#F5E1A4]">"Where Every Detail Dances in Elegance—Discover the Art of Unforgettable Moments."</p>
                 </div>
 
                 {/* Navigation Links
@@ -41,14 +41,14 @@ const Footer = () => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="absolute right-8 bottom-[8rem] flex flex-col items-end gap-4 z-10">
+            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[10rem] md:right-8 md:bottom-[8rem] flex flex-row md:flex-col items-end gap-4 z-10">
                 <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition transform duration-300"
                 >
-                    <Facebook className="h-6 w-6 text-[#faa722]" />
+                    <Facebook className="h-4 w-4 md:h-6 md:w-6 text-[#faa722]" />
                 </a>
                 <a
                     href="https://twitter.com"
@@ -56,7 +56,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition transform duration-300"
                 >
-                    <Twitter className="h-6 w-6 text-[#faa722]" />
+                    <Twitter className="h-4 w-4 md:h-6 md:w-6 text-[#faa722]" />
                 </a>
                 <a
                     href="https://instagram.com"
@@ -64,7 +64,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition transform duration-300"
                 >
-                    <Instagram className="h-6 w-6 text-[#faa722]" />
+                    <Instagram className="h-4 w-4 md:h-6 md:w-6 text-[#faa722]" />
                 </a>
                 <a
                     href="https://linkedin.com"
@@ -72,7 +72,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="hover:scale-125 transition transform duration-300"
                 >
-                    <Linkedin className="h-6 w-6 text-[#faa722]" />
+                    <Linkedin className="h-4 w-4 md:h-6 md:w-6 text-[#faa722]" />
                 </a>
             </div>
 
