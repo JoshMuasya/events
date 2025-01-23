@@ -37,6 +37,34 @@ const Why = () => {
         },
     ];
 
+    const animationSettings = {
+        initial: (index: number) => ({
+            opacity: 0,
+            x: index % 2 === 0 ? -100 : 100,
+        }),
+        whileInView: { opacity: 1, x: 0 },
+        viewport: { amount: 0.4 },
+        transition: { duration: 1, ease: "easeOut" },
+    };
+
+    const imageAnimationSettings = {
+        ...animationSettings,
+        transition: { duration: 1, delay: 0.2 },
+    };
+
+    const variants = {
+        hidden: (index: number) => ({
+            opacity: 0,
+            x: index % 2 === 0 ? -100 : 100,
+        }),
+        visible: { opacity: 1, x: 0 },
+    };
+
+    const textAnimationSettings = {
+        ...animationSettings,
+        transition: { duration: 1, delay: 0.4 },
+    };
+
     return (
         <div className='bg-[#1a0127]'>
             {/* Top */}
@@ -58,59 +86,61 @@ const Why = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-12 w-full px-4 md:w-3/4">
+                <div className="space-y-12 w-full px-4 md:w-3/4 overflow-x-hidden">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
                             className={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                                 } items-center lg:items-start shadow-bottomRight rounded-lg p-3 md:p-5 w-full`}
                             style={{
-                                backgroundColor: index % 2 === 0 ? "#2b1139" : "#3c1a4d", // Alternating background colors
+                                backgroundColor: index % 2 === 0 ? "#2b1139" : "#3c1a4d",
                             }}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} // Initial animation state
-                            whileInView={{ opacity: 1, x: 0 }} // Trigger animation when in view
-                            viewport={{ amount: 0.4 }} // Trigger once when 40% of the card is in view
+                            custom={index} // Pass index for dynamic animation
+                            variants={variants}
+                            initial="hidden" // Reference hidden variant
+                            whileInView="visible" // Reference visible variant
+                            viewport={{ amount: 0.4 }} // Trigger animation when 40% is visible
                             transition={{ duration: 1, ease: "easeOut" }}
                         >
                             {/* Left: Image */}
                             <motion.div
                                 className="w-full lg:w-1/2"
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                custom={index}
+                                variants={variants}
+                                initial="hidden"
+                                whileInView="visible"
                                 viewport={{ amount: 0.4 }}
                                 transition={{ duration: 1, delay: 0.2 }}
                             >
                                 <img
                                     src={feature.image}
                                     alt={feature.title}
-                                    className="w-full h-auto rounded-lg shadow-md"
+                                    className="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+                                    loading="lazy"
+                                    aria-label={`Image of ${feature.title}`}
                                 />
                             </motion.div>
 
                             {/* Right: Content */}
                             <motion.div
                                 className="w-full lg:w-1/2 lg:px-12 mt-6 lg:mt-0 px-2"
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
+                                custom={index}
+                                variants={variants}
+                                initial="hidden"
+                                whileInView="visible"
                                 viewport={{ amount: 0.4 }}
                                 transition={{ duration: 1, delay: 0.4 }}
                             >
-                                <h3 className="text-lg md:text-2xl font-semibold text-[#F5E1A4] break-words">{feature.title}</h3>
-                                <p className="text-[#E2C4FF] mt-4 text-sm md:text-lg break-words">{feature.description}</p>
+                                <h3 className="text-lg md:text-2xl font-semibold text-[#F5E1A4] break-words hover:text-[#FFD700] transition-colors duration-300">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-[#E2C4FF] mt-4 text-sm md:text-lg break-words">
+                                    {feature.description}
+                                </p>
                             </motion.div>
                         </motion.div>
                     ))}
                 </div>
-            </div>
-
-            {/* Metrics */}
-            <div>
-
-            </div>
-
-            {/* CTA */}
-            <div>
-
             </div>
         </div>
     )

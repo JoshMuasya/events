@@ -133,7 +133,7 @@ const Hero = () => {
 
                 {/* Partners Layer */}
                 <motion.div
-                    className="absolute bottom-0 left-0 w-full flex flex-row justify-around items-center py-4"
+                    className="absolute bottom-0 left-0 w-full flex flex-row justify-around items-center py-4 px-2"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{

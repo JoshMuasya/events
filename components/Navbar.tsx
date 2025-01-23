@@ -84,7 +84,7 @@ const Navbar = () => {
         width: "100%",
       }}
     >
-      <div className="z-30 h-16 bg-[rgba(25,0,51,0.5)] backdrop-blur-md flex justify-around items-center container mx-auto navbar px-3 sm:px-5 md:px-10 text-white border border-[rgba(255,255,255,0.2)] rounded-lg">
+      <div className="z-30 h-16 bg-[rgba(25,0,51,0.5)] backdrop-blur-md flex justify-around items-center container mx-auto navbar px-3 sm:px-5 md:px-10 text-white border border-[#E5941C] rounded-lg">
         {/* Logo */}
         <div className="block w-[16px] sm:w-[20px] md:w-[30px]">
           <img src="/logo.png" alt="Logo" className="w-full h-full" />
